@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Recession Prediction</h1>
+    <form action="{{ url_for('predict_datapoint')}}" method="post">
+      <input type="text" name="10 Year Treasury Yield" placeholder="10 Year Treasury Yield" required="required" /><br>
+    	<input type="text" name="3 Month Treasury Yield" placeholder="3 Month Treasury Yield" required="required" /><br>
+        <input type="text" name="3 Month Treasury Yield (Bond Equivalent Basis)" placeholder="3 Month Treasury Yield (Bond Equivalent Basis)" required="required" /><br>
+        <input type="text" name="Spread" placeholder="Spread" required="required" /><br>
+        <input type="text" name="Rec_prob" placeholder="Rec_prob" required="required" /><br>
+        <input type="text" name="year" placeholder="year" required="required" /><br>
+        <input type="text" name="month" placeholder="month" required="required" /><br>
+        <input type="text" name="day" placeholder="day" required="required" /><br>
+        
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+<body>
+
+   <br>
+   <br>
+
+
+ </div>
+ {{result}}
+
+</body>
+</html>
